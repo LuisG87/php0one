@@ -4,17 +4,17 @@
   <li>easy use with 0<name> ctrl + space</li>
  </ul>
  
- 0  - <?php ?>
- 0. - <?php } ?>
+ <p>0  - <?php ?> php tags open close
+ <p>0. - <?php } ?> close php control or function one line
  
  <h2>Control</h2>
- <p>0for
- <p>0foreach
- <p>0while
- <p>0if
+ <p>0for - creates a for start inline
+ <p>0foreach - creates a foreach start inline
+ <p>0while - creates a while start inline
+ <p>0if -  creates a if start inline
  
  <h2>Classes</h2>
- 0class
+ <p>0class - creates a php class with constructor
  
  <h2>functions</h2>
  <p>0func
@@ -23,14 +23,14 @@
  <p>0privfunc
  
  <h2>variables and constants</h2>
- <p>0privvar
- <p>0protvar
- <p>0pubvar
+ <p>0privvar - creates a private variable
+ <p>0protvar -creates a protected variable
+ <p>0pubvar -creates a public variable
  
  <h2>sql</h2>
- <p>0sql_i
- <p>0sql_d
- <p>0sql_u
- <p>0sql_sw
- <p>0sql_s
+ <p>0sql_i - creates an insert
+ <p>0sql_d - creates a delete
+ <p>0sql_u - creates an update
+ <p>0sql_sw - creates a SELECT WHERE
+ <p>0sql_s - creates a SELECT
  
