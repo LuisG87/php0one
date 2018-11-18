@@ -1,0 +1,230 @@
+{
+	"php": {
+		"prefix": "0",
+		"body": [
+			"<?php ?>"
+		],
+		"description": "php script"
+	},
+
+	"public variable": {
+		"prefix": "0pubvar",
+		"body": [
+			"public \\$${1:variable} = ${2:value}"
+		],
+		"description": "public variable"
+	},
+
+	"protected variable": {
+		"prefix": "0protvar",
+		"body": [
+			"protected \\$${1:variable} = ${2:value}"
+		],
+		"description": "protected variable"
+	},
+
+	"private variable": {
+		"prefix": "0privvar",
+		"body": [
+			"private \\$${1:variable} = ${2:value}"
+		],
+		"description": "private variable"
+	},
+
+
+	"class": {
+        "prefix": "0class",
+        "body": [
+          	"class ${1:classname}) {",
+		  	"\tfunction __construct(){",
+			"\t}",
+          	"}"
+        ],
+        "description": "class"
+	},
+
+	"function": {
+        "prefix": "0func",
+        "body": [
+          	"function ${1:classname}() {",
+		  	
+          	"}"
+        ],
+        "description": "function"
+	},
+
+	"public function": {
+        "prefix": "0pubfunc",
+        "body": [
+          	"public function ${1:classname}() {",
+		  	
+          	"}"
+        ],
+        "description": "public function"
+	},
+
+	"private function": {
+        "prefix": "0privfunc",
+        "body": [
+          	"private function ${1:classname}() {",
+		  	
+          	"}"
+        ],
+        "description": "private function"
+	},
+
+	"protected function": {
+        "prefix": "0protfunc",
+        "body": [
+          	"protected function ${1:classname}() {",
+		  	
+          	"}"
+        ],
+        "description": "protected function"
+	},
+
+	
+	"define": {
+		"prefix": "0define",
+		"body": [
+			"define(\"${1:CONSTANT_NAME}\",\"${2:constant_value}\")"
+			
+		],
+		"description": "define('CONSTANT_NAME', 'constant_value');"
+	},
+
+	"post": {
+		"prefix": "0post",
+		"body": [
+			"\\$_POST['${1:element}']"
+			
+		],
+		"description": "$_POST"
+	},
+
+	"get": {
+		"prefix": "0get",
+		"body": [
+			"\\$_GET['${1:element}']"
+			
+		],
+		"description": "$_GET"
+	},
+	
+	"if_start": {
+		"prefix": "0if",
+		"body": [
+			"<?php if (\\$${1:element}) { ?>"
+			
+		],
+		"description": "If start"
+	},
+	
+	"Foreach_start": {
+		"prefix": "0foreach",
+		"body": [
+			"<?php foreach (\\$${2:element} as \\$${1:array}) { ?>"
+			
+		],
+		"description": "Foreach start"
+	},
+
+	"For_start": {
+		"prefix": "0for",
+		"body": [
+			"<?php for (\\$i = 0 ; \\$i < count(\\$${1:array})} ; \\$i++) { ?>"
+			
+		],
+		"description": "For start"
+	},
+	
+	"while_start": {
+		"prefix": "0whilef",
+		"body": [
+			"<?php while ( \\$${2:element} = \\$${1:array}) { ?>"
+			
+		],
+		"description": "while start"
+	},
+
+	"echo on line": {
+		"prefix": "0e",
+		"body": [
+			"<?php echo \\$${1:} ; ?>"
+		],
+		"description": "echo on line"
+	},
+
+	"close in line": {
+		"prefix": "0.",
+		"body": [
+			"<?php } ?>"
+		],
+		"description": "close in line"
+	},
+
+	"sql select": {
+		"prefix": "0sql_s",
+		"body": [
+			"SELECT ${2:*} FROM ${1:table_name};"
+		],
+		"description": "sql select"
+	},
+
+	"sql select where": {
+		"prefix": "0sql_sw",
+		"body": [
+			"SELECT ${2:*} FROM ${1:table_name} WHERE ${3:cname}=${4:cvalue};"
+		],
+		"description": "sql select where"
+	},
+
+	"sql Insert": {
+		"prefix": "0sql_i",
+		"body": [
+			"INSERT INTO table_name (${2:column1}, ${1:column2}) VALUES (\\$${2:value1}, \\$${1:value2});"
+		],
+		"description": "sql insert"
+	},
+
+	"sql update": {
+		"prefix": "0sql_u",
+		"body": [
+			"UPDATE table_name SET ${1:column1} = \\$${1:value1}, ${2:column2} = \\$${2:value2} WHERE id = \\$id ;"
+		],
+		"description": "sql update"
+	},
+
+	"sql delete": {
+		"prefix": "0sql_d",
+		"body": [
+			"DELETE FROM ${1:table} WHERE ${2:column} = \\$${2:column};"
+		],
+		"description": "sql delete"
+	},
+
+	"db query": {
+		"prefix": "0db_q",
+		"body": [
+			"\\$db->query(${1:query})"
+		],
+		"description": "db query"
+	},
+
+	"db query first": {
+		"prefix": "0db_qf",
+		"body": [
+			"\\$db->query_first(${1:query})"
+		],
+		"description": "db query first"
+	},
+	
+	"db query fetch array": {
+		"prefix": "0db_qfa",
+		"body": [
+			"\\$db->query_fetch_array(${1:query})"
+		],
+		"description": "db query fetch array"
+	},
+}
+
