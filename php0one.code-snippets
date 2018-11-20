@@ -125,7 +125,7 @@
 	"Foreach_start": {
 		"prefix": "0foreach",
 		"body": [
-			"<?php foreach (\\$${2:element} as \\$${1:array}) { ?>"
+			"<?php foreach (\\$${2:elements} as \\$${1:element}) { ?>"
 			
 		],
 		"description": "Foreach start"
@@ -163,6 +163,42 @@
 			"<?php } ?>"
 		],
 		"description": "close in line"
+	},
+
+	"full if": {
+		"prefix": "00if",
+		"body": [
+			"if(\\$${1:}){",
+			"}"
+		],
+		"description": "full if"
+	},
+
+	"full while":{
+		"prefix": "00while",
+		"body":[
+			"while(\\$${1:}){",
+				"}"
+		],
+		"description": "full while"
+	},
+
+	"full for":{
+		"prefix": "00for",
+		"body":[
+			"for(\\$${1:i = 0};\\$${2:i}<count(\\$${3:array});\\$${4:i++}){",
+			"}"
+		],
+		"description": "full for"
+	},
+
+	"full foreach":{
+		"prefix": "00foreach",
+		"body":[
+			"foreach(\\$${1:elements} as \\$${2:element}){",
+			"}"
+		],
+		"description": "full foreach"
 	},
 
 	"sql select": {
@@ -229,4 +265,3 @@
 		"description": "db query fetch array"
 	},
 }
-
