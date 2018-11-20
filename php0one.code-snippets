@@ -217,6 +217,15 @@
 		"description": "sql select where"
 	},
 
+	"sql select where order by": {
+		"prefix": "0sql_swo",
+		"body": [
+			"SELECT ${2:*} FROM ${1:table_name} WHERE ${3:cname}=${4:cvalue} ORDER BY ${4:column} $ASC $DESC;"
+		],
+		"description": "sql select where order by "
+	},
+
+
 	"sql Insert": {
 		"prefix": "0sql_i",
 		"body": [
