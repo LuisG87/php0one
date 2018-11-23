@@ -1,4 +1,4 @@
-//	this code was made by blastcoding.com
+//	this code was made by blastcoding. Luis Gomez
 //	you can use commands by prefix and enter
 {
 	"php": {
@@ -273,4 +273,139 @@
 		],
 		"description": "db query fetch array"
 	},
+	
+	"multiline 2": {
+		"prefix": "0ml2",
+		"body": [
+			"\\$${1:varaible} = ${2:value}",
+			"\\$${1:varaible} = ${3:value}"
+		],
+		"description": "multiline 2 ( $variable =)"
+	},
+	"multiline 3": {
+		"prefix": "0ml3",
+		"body": [
+			"\\$${1:varaible} = ${2:value}",
+			"\\$${1:varaible} = ${3:value}",
+			"\\$${1:varaible} = ${4:value}"
+		],
+		"description": "multiline 3 ( $variable =)"
+	},
+	"multiline 4": {
+		"prefix": "0ml4",
+		"body": [
+			"\\$${1:varaible} = ${2:value};",
+			"\\$${1:varaible} = ${3:value};",
+			"\\$${1:varaible} = ${4:value};",
+			"\\$${1:varaible} = ${5:value};"
+		],
+		"description": "multiline 4 ( $variable =)"
+	},
+	"multiline 5": {
+		"prefix": "0ml5",
+		"body": [
+			"\\$${1:varaible} = ${2:value};",
+			"\\$${1:varaible} = ${3:value};",
+			"\\$${1:varaible} = ${4:value};",
+			"\\$${1:varaible} = ${5:value};",
+			"\\$${1:varaible} = ${6:value};"
+		],
+		"description": "multiline 5 ( $variable =)"
+	},
+	"multiline 6": {
+		"prefix": "0ml6",
+		"body": [
+			"\\$${1:varaible} = ${2:value};",
+			"\\$${1:varaible} = ${3:value};",
+			"\\$${1:varaible} = ${4:value};",
+			"\\$${1:varaible} = ${5:value};",
+			"\\$${1:varaible} = ${6:value};",
+			"\\$${1:varaible} = ${7:value};"
+		],
+		"description": "multiline 6 ( $variable =)"
+	},
+	"multiline 7": {
+		"prefix": "0ml7",
+		"body": [
+			"\\$${1:varaible} = ${2:value};",
+			"\\$${1:varaible} = ${3:value};",
+			"\\$${1:varaible} = ${4:value};",
+			"\\$${1:varaible} = ${5:value};",
+			"\\$${1:varaible} = ${6:value};",
+			"\\$${1:varaible} = ${7:value};",
+			"\\$${1:varaible} = ${8:value};"
+		],
+		"description": "multiline 7 ( $variable =)"
+	},
+
+	"multiline 8": {
+		"prefix": "0ml8",
+		"body": [
+			"\\$${1:varaible} = ${2:value};",
+			"\\$${1:varaible} = ${3:value};",
+			"\\$${1:varaible} = ${4:value};",
+			"\\$${1:varaible} = ${5:value};",
+			"\\$${1:varaible} = ${6:value};",
+			"\\$${1:varaible} = ${7:value};",
+			"\\$${1:varaible} = ${8:value};",
+			"\\$${1:varaible} = ${9:value};"
+		],
+		"description": "multiline 8 ( $variable =)"
+	},
+/**_______________________________________________________________________________________
+*			CODEIGNITER - 1
+____________________________________________________________________________________________*/
+	"codeigniter load view": {
+		"prefix": "1lv",
+		"body": [
+			"\\$this->load->view('${1:view_name}',\\$${2:data});"
+		],
+		"description": "codeigniter load view"
+	},
+
+	"codeigniter load model": {
+		"prefix": "1lm",
+		"body": [
+			"\\$this->load->model('${1:view_name}');"
+		],
+		"description": "codeigniter load model"
+	},
+
+	"codeigniter pass data": {
+		"prefix": "1data",
+		"body": [
+			"\\$data['${1:view_name}'] = \\$${2:data_value};"
+		],
+		"description": "codeigniter load view"
+	},
+	"codeigniter crud": {
+		"prefix": "1crud_c",
+		"body": [
+			"class ${1:Your_class} extends CI_Controller {",
+			"public function show(){\n\n}",
+			"public function create(){\n\n}",
+			"public function update(){\n\n}",
+			"public function delete(){\n\n}",
+			"}"
+		],
+		"description": "codeigniter crud"
+	},
+	"codeigniter model":{
+		"prefix": "1model",
+		"body": [
+			"class ${1:News_model} extends CI_Model {",
+			"\tpublic function __construct()",
+				"\t{",
+					"\t\t$this->load->database();",
+				"\t}",
+			"}"
+		],
+		"description": "codeigniter model"
+	}
 }
+
+
+
+
+
+
