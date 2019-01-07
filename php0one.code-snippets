@@ -200,6 +200,81 @@
 		],
 		"description": "full foreach"
 	},
+	"session start":{
+		"prefix": "0ss",
+		"body":[
+			"session_start();"
+		],
+		"description": "session start"
+	},
+	//>mysql section
+	"mysqli connection":{
+	"prefix": "0mysqli",
+	"body":[
+		"\\$servername = \"${1:servername}\";",
+		"\\$username = \"${2:username}\";",
+		"\\$password = \"${3:password}\";",
+		"\\$database = \"${4:database}\";",
+
+		"\\$conn = mysqli_connect(\\$servername, \\$username, \\$password,\\$database);\n",
+
+		"if (!$conn) {",
+			"\tdie(\"Connection failed: \" . mysqli_connect_error());",
+		"}"
+	],
+		"description": "mysqli connection"
+	},
+
+	"pdo conection":{
+	"prefix": "0pdo",
+	"body":[
+	"\\$servername = \"${1:localhost}\";",
+	"\\$username = \"${2:username}\";",
+	"\\$password = \"${3:password}\";",
+	
+	"try {",
+		"\t\\$conn = new PDO(\"${4:mysql}:host=\\$servername;dbname=${5:myDB}\", \\$username, \\$password);",
+		"\t\\$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);",
+		"\techo \"Connected successfully\";", 
+		"}",
+	"catch(PDOException \\$e)",
+	"{",
+	"\techo \"Connection failed: \" . \\$e->getMessage();",
+	"}"
+	],
+	"description": "pdo connection"
+	},
+
+	"session variable":{
+		"prefix": "0s",
+		"body":[
+			"\\$_SESSION['${2:element}']"
+		],
+		"description": "session variable"
+	},
+
+	"date to spanish":{
+		"prefix": "0dateSPN",
+		"body":[
+			"date('d-m-Y', strtotime(\\$${1:date}));",
+		],
+		"description":" date to spanish"
+	},
+
+	"date to english":{
+		"prefix": "0dateENG",
+		"body":[
+			"date('Y-m-d', strtotime(\\$${1:date}));",
+		],
+		"description":" date to english"
+	},
+
+	"date to USA":{
+		"prefix": "0dateUSA",
+		"body":[
+			"date('m-d-Y', strtotime(\\$${1:date}));",
+		],
+	},
 
 	"sql select": {
 		"prefix": "0sql_s",
@@ -352,9 +427,14 @@
 		],
 		"description": "multiline 8 ( $variable =)"
 	},
-/**_______________________________________________________________________________________
+
+
+
+
+
+/**____________________________________________________________________________________________________________
 *			CODEIGNITER - 1
-____________________________________________________________________________________________*/
+_______________________________________________________________________________________________________________*/
 	"codeigniter load view": {
 		"prefix": "1lv",
 		"body": [
@@ -401,11 +481,156 @@ ________________________________________________________________________________
 			"}"
 		],
 		"description": "codeigniter model"
-	}
+	},
+
+
+
+
+
+
+
+/**___________________________________________________________________________________________________________
+* LARAVEL - 2
+_____________________________________________________________________________________________________________*/
+	"section show":{
+		"prefix": "2bsecshow",
+		"body": [
+			"@section('${1:section_name}')",
+        	"@show"
+		],
+		"description": "section show"
+	},
+	"section endsection":{
+		"prefix": "2bsecend",
+		"body": [
+			"@section('${1:section_name}')",
+        	"@endsection"
+		],
+		"description": "section endsection"
+	},
+
+	"yield":{
+		"prefix": "2byield",
+		"body": [
+			"@yield('${1:name}')",
+		],
+		"description": "yield"
+	},
+
+	"extends":{
+		"prefix": "2bextends",
+		"body": [
+			"@extends('${1:name}')"
+		],
+		"description": "extends"
+	},
+	// Routes
+	"Route get function":{
+		"prefix": "2rg_func",
+		"body": [
+			"Route::get('${1:name}', function () {",
+			"\t${2:dosomething}",	
+			"});"
+		],
+		"description": "route get function"
+	},
+
+	"route post function":{
+		"prefix": "2rpo_func",
+		"body": [
+			"Route::post('${1:name}', function () {",
+			"\t${2:dosomething}",	
+			"});"
+		],
+		"description": "route post function"
+	},
+
+	"route put function":{
+		"prefix": "2rput_func",
+		"body": [
+			"Route::put('${1:name}', function () {",
+			"\t${2:dosomething}",	
+			"});"
+		],
+		"description": "route put function"
+	},
+
+	"route patch function":{
+		"prefix": "2rpa_func",
+		"body": [
+			"Route::patch('${1:name}', function () {",
+			"\t${2:dosomething}",	
+			"});"
+		],
+		"description": "route patch function"
+	},
+
+	"route delete function":{
+		"prefix": "2rdel_func",
+		"body": [
+			"Route::delete('${1:name}', function () {",
+			"\t${2:dosomething}",	
+			"});"
+		],
+		"description": "route delete function"
+	},
+
+	"route option function":{
+		"prefix": "2rop_func",
+		"body": [
+			"Route::option('${1:name}', function () {",
+			"\t${2:dosomething}",	
+			"});"
+		],
+		"description": "route option function"
+	},
+
+	"route get controller":{
+		"prefix": "2rg",
+		"body": [
+			"Route::get('${1:name}', '${2:controller_name}@${3:controller_method}');"
+		],
+		"description": "route get controller"
+	},
+
+	"route post controller":{
+		"prefix": "2rpost",
+		"body": [
+			"Route::post('${1:name}', '${2:controller_name}@${3:controller_method}');"
+		],
+		"description": "route post controller"
+	},
+
+	"route patch controller":{
+		"prefix": "2rpatch",
+		"body": [
+			"Route::patch('${1:name}', '${2:controller_name}@${3:controller_method}');"
+		],
+		"description": "route patch controller"
+	},
+
+	"route delete controller":{
+		"prefix": "2rdelete",
+		"body": [
+			"Route::delete('${1:name}', '${2:controller_name}@${3:controller_method}');"
+		],
+		"description": "route delete controller"
+	},
+
+	"route put controller":{
+		"prefix": "2rput",
+		"body": [
+			"Route::put('${1:name}', '${2:controller_name}@${3:controller_method}');"
+		],
+		"description": "route put controller"
+	},
+
+	"route option controller":{
+		"prefix": "2roption",
+		"body": [
+			"Route::option('${1:name}', '${2:controller_name}@${3:controller_method}');"
+		],
+		"description": "route option controller"
+	},
+
 }
-
-
-
-
-
-
