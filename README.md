@@ -33,4 +33,6 @@
  <p>0sql_u - creates an update
  <p>0sql_sw - creates a SELECT WHERE
  <p>0sql_s - creates a SELECT
+   
+   <a href="blastcoding.com">blastcoding.com</a>
  
