@@ -33,6 +33,11 @@
  <p>0sql_u - creates an update
  <p>0sql_sw - creates a SELECT WHERE
  <p>0sql_s - creates a SELECT
+ 
+ <h2>Dates</h2>
+ <p>0dateUSA - date to usa
+ <p>0dateENG - date to english
+ <p>0dateSPN -date to spanish
    
    <a href="blastcoding.com">blastcoding.com</a>
  
