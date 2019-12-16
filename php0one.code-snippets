@@ -1,6 +1,31 @@
 //	this code was made by blastcoding. Luis Gomez
 //	you can use commands by prefix and enter
 {
+	"htmlbasic":{
+		"prefix": ".document",
+		"body": [
+			"<!doctype html>",
+			"<html lang=\"\">",
+			"\t<head>",
+				"\t\t<meta charset=\"utf-8\">",
+				"\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">",
+				"\t\t<title></title>",
+				"\t\t<meta name=\"description\" content=\"\">",
+				"\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+		
+				"\t\t<link rel=\"stylesheet\" href=\"css/main.css\">",
+			"\t</head>",
+			"\t<body>",
+				"<header></header>",
+				"<p></p>",
+				"<main></main>",
+				"<footer></footer>",
+			"\t</body>",
+		"</html>"
+		],
+		"description": "html 5 basic doc"
+	},
+
 	"php": {
 		"prefix": "0",
 		"body": [
